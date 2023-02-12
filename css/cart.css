@@ -1,0 +1,450 @@
+@import 'nav.css';
+@import 'footer.css';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+
+  h1 {
+    font-size: 16px;
+    margin: 5px;
+    color: black;
+
+  }
+  h5{
+      margin: 5px;
+  }
+  .products-container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffebee;
+    /* background: url("D:/Maanasa/PROJECTS/Websites/Nihas My version/images/back2.jpg"); */
+  }
+/*styling scroll bars*/
+.summary_card::-webkit-scrollbar {
+    width: 1px;
+    
+  }
+  /* Track */
+  .summary_card::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .summary_card::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .summary_card::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+
+  .details_card::-webkit-scrollbar {
+    width: 1px;
+    
+  }
+  /* Track */
+  .details_card::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .details_card::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .details_card::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  /*end of styling scroll bars*/
+  
+
+
+ 
+  /*
+  Payment Information card
+  */
+  .details_card {
+    width: 700px;
+    height: 400px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    overflow: auto;
+  }
+  
+  /*
+  Order Summary Card
+  */
+  .order_summary {
+    background-color: white;
+    width: 350px;
+    height: 400px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    
+  }
+  .summary_card{
+      height: 380px;
+      overflow: auto;
+    
+      border-radius: 5px;
+      
+  }
+  
+  /*
+  Order Card Item Card
+  */
+  .card_item {
+    display: flex;
+    position: relative;
+    margin: 10px 0;
+    
+   
+  }
+  .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+  
+  .card_item .product_img img {
+    
+    margin-right: 10px;
+    width: 70px;
+    margin-left: 10px;
+    border-radius: 5px;
+  }
+
+  /* .product_info{
+      height: 100px;
+  } */
+  
+  .product_info h1 {
+    font-size: 20px;
+    color: #1e212d;
+    margin: 5px 0;
+  }
+  
+  .product_info p {
+    color: #a1a1a1;
+    font-size: 14px;
+    height: 25px;
+    margin: 0;
+  }
+  .product_rate_info {
+    display: flex;
+    height: 30px;
+    margin: 5px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product_rate_info h1{
+      font-size: 15px;
+  }
+  
+  .button-minus , .button-plus{
+    
+  border: none;
+  background-color: transparent;
+  padding: 2px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px ;
+  cursor: pointer;
+  }
+  /*
+  cart item + & -
+  */
+  .pqt {
+    font-size: 15px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+  }
+  
+  /* .pqt-plus,
+  .pqt-minus {
+    background: #fcfcfc;
+    border: none;
+    font-size: 20px;
+    height: 100%;
+    padding: 0 15px;
+  } */
+  .pqt-plus:hover,
+  .pqt-minus:hover {
+    background: #53b5aa;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .pqt-plus {
+    line-height: 30px;
+  }
+  
+  .pqt-minus {
+    line-height: 30px;
+  }
+  /*
+  Order price & total
+  */
+  .order_price,
+  .order_service,
+  .order_total {
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .order_price p,
+  .order_service p {
+    color: #a1a1a1;
+  }
+  
+  .order_total p {
+    font-weight: 600;
+  }
+  
+  .basketTotalContainer{
+      display: flex;
+      justify-content: flex-end;
+
+  }
+  /*
+  Payment Information all input
+  */
+/*   
+  .details_card{
+      overflow: auto;
+  } */
+
+  input {
+    outline: 0;
+    background: #f2f2f2;
+    border-radius: 4px;
+    width: 96%;
+    border: solid 1px;
+    caret-color: #4f5d7e;
+    margin: 10px 15px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  #same_person, #others{
+        width: 5%;
+  }
+
+  legend,
+  .sender_details p{
+      font-size: 16px;
+      font-weight: bold;
+      padding: 15px;
+  }
+  
+  .first_lastName,
+  .shipping_card,
+  .address,
+  .email_phn {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .new_card {
+    width: 100%;
+    height: 100px;
+    border: 2px solid #53b5aa;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .add_savedcard {
+    width: 100%;
+    height: 100px;
+    border: 2px solid #a1a1a1;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  /*
+  Procced Payment button
+  */
+
+  .proced_payment{
+    padding-left: 14px;
+
+  }
+  .proced_payment a {
+    padding: 10px 20px;
+    width: 200px;
+    border: 2px solid #f5f5f5;
+    background-color: #53b5aa;
+    color: #000;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  fieldset {
+    
+    border:0;
+}
+  #myBtn{
+    width: 100%;
+    height: 35px;
+    color: white;
+    font-size: 15px;
+    border: transparent;
+    background-color: palevioletred;
+    border-radius: 4px;
+    
+  }
+  #myBtn1{
+    width: 100%;
+    height: 34px;
+    color: white;
+    font-size: 14px;
+    border: transparent;
+    background-color: palevioletred;
+  }
+  #myBtn1 a{
+    color: white;
+    text-decoration: none;
+    font-size: 110%;
+  }
+
+/* modal styles */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 300px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 22%;
+  height: auto;
+  top: -77px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+span.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 15px 16px;
+  background-color: transparent;
+  background-color: pink;
+  display: flex;
+  align-items: flex-end;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  display: flex;
+
+}
+.modalBasketTotal, .Deliverycharges, .Totalamt{
+  display: flex;
+  justify-content: space-between;
+}
+
+.qrcode{
+  height: 220px;
+}
+
+.modal-section {
+  padding: 14px 16px;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+
+/* ----------------emailbody-------------- */
+
+
+.hello h4{
+  margin: 0px;
+}
+/* table{
+  border: 2px solid palevioletred;
+}
+
+th, td {
+  width: 25%;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #000;
+} */
+
+/* #Deliveryaddress h4, #Deliverydate h4{
+  margin-bottom: 0px;
+} */
+
+
+/* 
+.mailbody{
+  display: flex;
+  flex-direction: row;
+
+} */

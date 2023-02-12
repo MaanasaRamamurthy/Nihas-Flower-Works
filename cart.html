@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Mali:wght@300&display=swap" rel="stylesheet">
+    <title>Nihas Flower Works</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    
+</head>
+
+
+
+<body>
+
+                    <!-- ------------navigation bar-------------->
+    
+    <div class="popup">
+        <nav class="navbar" id="nav">  
+            <script src="js/nav.js"></script>
+        </nav>
+        
+                        <!-- ---------products container--------- -->
+    
+        <div class="products-container">
+            
+            
+                        <!-- --------------order summary-------------- -->
+    
+            <div class="productsincart">
+                <h1>Order Information</h1>
+                <div class="order_summary">
+                    <div class="summary_card">
+                        <h3 style="text-align: center;
+                        padding: 50% 0px;">Your cart is empty!! :(</h3>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+                        <!-- ------------------user information form-------------------- -->
+    
+            <div class="payment_details">
+                <h1>Payment Information</h1>
+                <form name="form1" action="javascript:open_modal()" method="post">
+                    <div class="details_card">
+                        <div class="sender_details">
+                            <p>Enter sender details</p>
+                        </div>
+                        <div class="name_address">
+                                <div class="first_lastName">
+                                  <input type="text" name="First" id="First" placeholder="Name*" aria-required="true" required/>
+                                </div>
+                                <div class="address">
+                                  <input type="text" name="Address" id="put" placeholder="Address*" aria-required="true" required/>
+                                  <input list="districts" name="Pincode" id="pin"   pattern="Namakal|Erode|Tiruchengode|Bhavani|Coimbatore|Salem"
+                                  title='Please select an option from the dropdown' placeholder="District*" aria-required="true" required/>
+                                  <datalist id="districts">
+                                    <option value="Namakal">
+                                    <option value="Erode">
+                                    <option value="Tiruchengode">
+                                    <option value="Bhavani">
+                                    <option value="Salem">
+                                    <option value="Coimbatore">
+                                  </datalist>
+                                
+                                  <input type="text" name="Country" placeholder="Country" />
+                                </div>
+                                <div class="email_phn">
+                                    <input type="email" name="Email" id="email" placeholder="Enter email-address*" aria-required="true" required/>
+                                    <input type="text" name="Phone_number" id="phn"  placeholder="Enter Phone Number*" aria-required="true" required/>
+                                </div>
+                        </div>
+        
+                        
+                        <fieldset>
+                            <legend >Enter receiver details</legend>
+                            <input type="radio" name="copy" value="yes" id="same_person" onclick="data_copy()" />
+                            <label for="same_person">Same person</label>
+                            <input type="radio" name="copy" value="no"  id="others" onclick="data_copy()" />
+                            <label for="diff_person">Other person</label>  
+                        </fieldset>
+        
+                        
+                        <div class="name_address">
+                                <div class="first_lastName">
+                                  <input type="text" name="First1" id="First1" placeholder="First Name " class="otherlan"  aria-required="true" />
+                                </div>
+                                
+                                <div class="address">
+                                  <input type="text" name="Address1" id="put1" class="otherlan" placeholder="Address"  aria-required="true"/>
+                                  <input type="text" list="districts" name="Pincode1" id="pin1"   pattern="Namakal|Erode|Tiruchengode|Bhavani|Coimbatore|Salem"
+                                  title='Please select an option from the dropdown' placeholder="District*" aria-required="true" required/>
+                                  <datalist id="districts">
+                                    <option value="Namakal">
+                                    <option value="Erode">
+                                    <option value="Tiruchengode">
+                                    <option value="Bhavani">
+                                    <option value="Salem">
+                                    <option value="Coimbatore">
+                                  </datalist>
+                                  
+                                </div>
+                                <div class="email_phn">
+                                    <input type="email" name="Email1" id="email1" placeholder="Enter email-address*" aria-required="true" required/>
+                                    <input type="text" name="Phone_number1" id="phn1" pattern="[0-9]{10}" placeholder="Enter Phone Number*" aria-required="true" required/>
+                                </div>
+                                <div>
+                                    <label for="Delivery">Delivery Date</label>
+                                    <input type="date" id="Delivery" name="Delivery" onclick="date()" aria-required="true">
+                                </div>
+                                
+                                
+                        </div>
+                        <div>
+                            
+                        </div>
+                        
+                        
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
+                        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+    
+    
+                        <div class="proceed_payment">
+                                <button  id="myBtn" aria-disabled="true">Proceed for Payment</button>
+                        </div>
+                        
+        
+                    
+    
+                    </div>
+                </form>
+            </div>    
+        </div>         
+        
+    
+    
+    
+                                            <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+    
+            </div>
+        </div>
+    
+                                    <!-- ------------footer---------- -->
+        
+        
+        <footer>
+            <script src="js/footer.js"></script>
+        </footer>
+    </div>
+     <div id="customermailbody" class="customermailbody">
+        <table align="center" class="table" style="width: 540px; border: 20px solid lightgrey;" bgcolor="lightgrey" hidden >
+            <tbody >
+                <div style="flex-direction: column; display: flex; justify-content: space-between; align-items: center;">
+                    <tr>
+                        <td align="center">
+                            <h3 style="font-size: 30px; margin-bottom: 0px;">Hello Customer!</h3>
+                            <p style="font-size: 15px; margin-top: 0px;">Sit back and relax. Your order is Confirmed</p>
+                        </td>
+                    
+                    </tr>
+                        
+                            <tr style="    margin: 3px 0px;">
+                                <td style="width: 500px;
+                                background: white;
+                               border-radius: 5px;
+                                padding-bottom: 10px;">
+                                    <table style="width: 350px;    margin: 0px 70px;">
+                                    
+                                        <tbody id="senderdetails">
+                                            <h3 style="    text-align: center;
+                                            margin-bottom: 0px;">SENDER DETAILS</h3>
+                                            <hr style="width: 350px;">
+                                        </tbody>
+                                    </table>
+                                </td>
+                               
+                            </tr>
+                            
+                            <tr style="    margin: 3px 0px;">
+                                <td  style="width: 500px;
+                                background: white;
+                                border-radius: 5px;
+                                padding-bottom: 10px;">
+                                    <table style="width: 350px;    margin: 0px 70px;">
+                                        <tbody id="receiverdetails">
+                                            <h3 style="    text-align: center;
+                                            margin-bottom: 0px;"> RECEIVER DETAILS</h3>
+                                            <hr  style="width: 350px;">
+                                        </tbody>
+                                    </table>
+                                </td>
+                               
+                            </tr>
+                        
+                            <tr style="    margin: 3px 0px;">
+                                <td  style="width: 500px;
+                                background: white;
+                                border-radius: 5px;
+                                padding-bottom: 10px;">
+                                    <table style="width: 350px;    margin: 0px 70px;">
+                                        <thead>
+                                            <tr style="text-align: left;">
+                                                <th>Order No</th>
+                                                <th>Flower name</th>
+                                                <th>Quantity</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="orderdetails">
+                                            <h3 style="    text-align: center;
+                                            margin-bottom: 0px;"> ORDER DETAILS</h3>
+                                            <hr  style="width: 350px;">
+
+                                        </tbody>
+                                    </table>
+                                </td>
+                                
+                            </tr>
+                           
+                            <tr style="display: flex;
+                            width: 100%;
+                            margin: 3px 0px;
+                            justify-content: space-between;">
+                            
+                                <td style="    background: white;
+                                width: 50%;
+                                border-radius: 5px;
+                                border-right: 1px solid black;
+                            " id="Deliveryaddress">
+                                    <!-- <table>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table> -->
+                                    <h4 style="margin-bottom: 0px;"> Delivering at</h4>
+                                </td>
+                                <td style="    background: white;
+                                width: 50%;
+                                border-radius: 5px;
+                                padding-bottom: 5px;
+                                border-left: 1px solid black;
+                            " id="Deliverydate">
+                                    <!-- <table>
+                                        <tbody >
+        
+                                        </tbody>
+                                    </table> -->
+                                    <h4 style="margin-bottom: 0px">  Your order will be delivered on : </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="index.html" style="text-decoration: overline; color: black;"><h1 style="margin-bottom: 5px;">Nihas Flower works</h1></a>
+                                    <h4 style="margin: 0px;">For further queries contact: </h4>
+                                    <p style="margin: 0px;">Phone number: 8870014385 / 9655111290</p>
+                                    <p style="margin: 0px;">Email ID: ganuradha1809@gmail.com</p>
+
+
+                                </td>
+                            </tr>
+                </div>
+                
+
+            </tbody>
+                    
+                
+           
+        </table>
+
+    </div>
+    <div id="mailbodycontent">
+        <table hidden>
+            <tbody>
+                <tr>
+                    <td>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th colspan="5">Sender Details</th>
+                                    <th colspan="5">Receiver details</th>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>District</th>
+                                    <th>Email ID</th>
+                                    <th>Phone Number</th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>District</th>
+                                    <th>Email ID</th>
+                                    <th>Phone Number</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table1">
+                                <h3>SENDER AND RECEIVER DETAILS</h3>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Order No</th>
+                                    <th>Flower name</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table3">
+                                <h3>ORDER DETAILS</h3>
+                                
+    
+                            </tbody>
+                        </table>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>Basket Total</th>
+                                    <th>Delivery charges</th>
+                                    <th>Total Amount</th>
+                                    <th>Delivery date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table4">
+                                <h3>PRICE DETAILS</h3>
+                                
+    
+                            </tbody>
+                        </table>
+                       
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+   
+
+</body>
+
+<script src="js/mains.js"></script>
+
+
+</html>

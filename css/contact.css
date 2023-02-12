@@ -1,0 +1,65 @@
+@import 'nav.css';
+@import 'footer.css';
+
+
+.contact-page{
+    background: #ffebee;
+}
+.location-timing{
+
+    display: flex;
+    height: 23vh;
+    width: 100%;
+}
+
+.location{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 160px;
+}
+
+hr{
+    color: black;
+    width: 340px;
+}
+
+/* .fa{
+    padding: 6px 6px;
+    border: #0c0c0c solid 2px;
+    font-size: 36px;
+    color: pink; */
+    /* border-radius: 50%; */
+    /* border:1px solid black; */
+/* } */
+.timing{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 135px;
+}
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:70vh;
+    width:100%;
+    padding: 0px 50px;
+  
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:63vh;
+    width:100%;
+    border: 2px solid black;
+}
+
+iframe{
+    width: 100%;
+    height: 63vh;
+}

@@ -1,0 +1,450 @@
+@import 'nav.css';
+@import 'footer.css';
+
+
+
+
+
+.product{
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: #ffebee;
+}
+
+/* h2{
+    font-weight: 300;
+    font-size: 1.2em;
+} */
+.product-category{
+    padding: 0 10vw;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    color: rgb(39, 39, 39)
+}
+.product-bouquets ,.product-bridal,.product-Engagement ,.product-cardecor,.product-chocolate,.product-floral,.product-gajra,.product-homewarming,.product-trousseau,.product-function,.product-wreath,.product-wedding,.product-garland {
+    /* display: grid;
+    grid-gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% - 58rem);
+    min-height: 62vh;
+    padding: 0 10vw;
+    scroll-behavior: smooth; */
+    display: flex;
+    flex-direction: revert;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding-left: 10vw;
+    scroll-behavior: smooth;
+    height: 415px;
+    width: 90%;
+    
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+    grid-row-gap: 40px; */
+}
+
+/* -------------------------scrollbar-------------------------- */
+
+.product-bouquets::-webkit-scrollbar {
+    -webkit-appearance: none;
+    
+}
+
+.product-bouquets::-webkit-scrollbar:vertical {
+    width: 5px;
+    
+}
+.product-bouquets::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+    
+}
+
+/* --------------------- */
+
+.product-bridal::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.product-bridal::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+.product-bridal::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+/* ------------------------ */
+
+
+
+.product-Engagement::-webkit-scrollbar {
+    -webkit-appearance: none; 
+}
+.product-Engagement::-webkit-scrollbar:vertical {
+    width: 5px; 
+}
+.product-Engagement::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5); 
+}
+
+
+
+/* ------------------- */
+
+
+
+.product-cardecor::-webkit-scrollbar {
+    -webkit-appearance: none; 
+}
+
+.product-cardecor::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+.product-cardecor::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5); 
+}
+
+
+/* -------------------------- */
+
+
+
+.product-chocolate::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product-chocolate::-webkit-scrollbar:vertical{
+    
+    width: 5px;
+}
+.product-chocolate::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+.product-floral::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product-floral::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+.product-floral::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+
+.product-gajra::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product-gajra::-webkit-scrollbar:vertical{
+    width: 5px;
+}
+.product-gajra::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+.product-garland::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product-garland::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+.product-garland::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+.product-homewarming::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product-homewarming::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+.product-homewarming::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+
+.product-function::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product-function::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+.product-function::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+
+.product-trousseau::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product-trousseau::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+.product-trousseau::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+
+.product-wreath::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product-wreath::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+.product-wreath::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.product-wedding::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product-wedding::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+.product-wedding::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+/* -------------------------------end of scrollbar--------------------------- */
+
+.product-card{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 365px;
+    margin: 20px;
+    /* box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); */
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(248, 212, 218);
+    background-color: white;
+}
+
+.product-image{
+    
+    position: relative;
+    width: 100%;
+    height: 295px;
+    overflow: hidden;
+}
+.product-image div{
+    position: absolute;
+    bottom: 35%;
+    top: 45%;
+    right: 27%;
+    background:whitesmoke;
+    color: black;
+    margin-bottom: 25px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+   }
+   
+   /* Hover on Parent Container */
+   .product-image:hover{
+    cursor: pointer;
+   }
+   
+   .product-image:hover div{
+    width: 118px;
+    padding: 8px 8px;
+    visibility: visible;
+    opacity: 0.7; 
+   }
+
+.product-thumb{
+    
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 2px;
+
+}
+
+
+.discount-tag{
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.card-btn{
+    
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn{
+    opacity: 1;
+}
+
+.card-btn:hover{
+    background: #efefef;
+}
+
+.product-info{
+    width: 100%;
+    height: 100px;
+    padding-top: 4px;
+    text-align: center;
+}
+
+.product-brand{
+    text-transform: uppercase;
+}
+
+.product-short-des{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.actual-price{
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+/* //////////////////////////////// */
+
+
+
+/* The Modal (background) */
+
+
+
+
+.modalZoom {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  
+  /* Modal Content */
+  .modal-content1 {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 5px solid pink;
+    width: auto;
+    height: 65%;
+    top: -77px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.2s;
+    animation-name: animatetop;
+    animation-duration: 0.2s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  span.close1 {
+    color: black;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    align-self: center;
+    background-color: pink;
+    width: 45px;
+    text-align: center;
+  }
+  
+  .close1:hover,
+  .close1:focus {
+   
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
